@@ -43,6 +43,7 @@ app.post('/api/login', function(req, res) {
 				var token = jwt.sign({ id: user.id }, secret);
 				
 				var response = {
+					id: user.id,
 					token: token,
 					username: user.username,
 					message: "Login Success",
